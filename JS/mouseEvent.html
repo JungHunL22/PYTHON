@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseEvent</title>
+    <script type="text/javascript">
+      // body태그 내의 img 태그에서 발생하는 이벤트를 처리
+      // img 태그가 준비된 상태에서 스크립트 코드가 진행이 되어야 하므로
+      // window가 로드되면 이벤트 처리 콜백함수
+      window.onload = function(){
+        // img 태그 포인터 추출
+        var bImg = document.getElementById('birdImg');
+
+        // img 태그에 마우스 올렸을 때 이벤트 처리 콜백함수
+        bImg.onmouseover = function() {
+          bImg.style.opacity = 0.5;
+        }
+        bImg.onmouseout = function() {
+          bImg.style.opacity = 1;
+        }
+        // 문서 상에서 오른쪽 마우스 클릭했을 때 이벤트 처리 콜백 함수
+        document.oncontextmenu =function() {
+          alert("마우스 오른쪽 버튼 사용을 금지합니다.")
+          return false;
+        }
+      }
+
+    </script>
+</head>
+<body>
+  <img id="birdImg" src="image/bird.jpg">
+</body>
+</html>
