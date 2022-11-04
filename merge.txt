@@ -1,0 +1,7 @@
+df1.head(1)
+df2.head(1)
+# 두 df의 공통열(같은 이름을 갖는 컬럼) : 고객번호
+df1.merge(df2)
+
+# outer join : 키 값이 한쪽에만 있어도 데이터를 출력
+pd.merge(df1,df2,how='outer'
