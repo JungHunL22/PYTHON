@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Position 속성</title>
+    <style type="text/css"> 	
+        #parent{
+        /* positon 생략되어있으면 statick*/
+            position:relative;
+            width : 200px;
+            height : 300px;
+            border : solid 5px #000000;
+            margin : 50px 0 0 50px
+                }
+        #boxA, #boxC, #boxB {
+                width:80px;
+                height:80px;}
+        #boxA { background-color:#ff0000;}
+        #boxB { background-color:#00ff00;}
+        #boxC { background-color:#ffff00;}
+
+        #boxB{
+            position:absolute;
+            /* 상위태그인 parent의 position이 static이면 기준은 브라우저*/
+            /* 상위태그인 parent의 position이 relative/absolute면 기준은 parent */
+            top:20px;
+            left:20px;}
+	</style>
+</head>
+	
+<body>
+	<div id="parent">
+        <div id="boxA">A</div>
+        <div id="boxB">B</div>
+        <div id="boxC">C</div>
+	</div>
+</body>
+</html>
+
+
+
+

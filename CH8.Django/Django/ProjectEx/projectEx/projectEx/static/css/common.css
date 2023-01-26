@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* common.css */
+
+/* 모든 콘텐츠를 포함하는 box */
+* {margin:0 auto;}
+
+#wrap {
+      width:1280px; /* 영역너비 */
+      background-color:#eeeeee; /* 배경색 회색 */
+      text-align:center; /* 글자정렬 */
+      position:relative; /* 상대 포지션 변경으로 가운데정렬 가능 */
+      }
+
+
+/* 모든 <img>태그 테두리 없음 */
+img {border:0; margin:0;}
+
+/****************** footer *******************/
+#footerBox div {
+    background: #777777;
+    border:solid 1px #999999;
+    margin:-top:10px;
+    padding:20px;
+    margin:0;
+}
+
+/******************* FOOTER BOTTOM MENU *******************/
+#bottomMenuBox{
+    height:30px;
+    line-height:30px;
+}
+
+#bottomMenuBox li{
+    display:inline-block;
+    tex-align:center;
+    padding:5px;
+}
+
+#bottomMenuBox a{
+        color: white;
+        font-weight:bold;
+        text-decoration:none;
+}
+
+#moveToTop:hover { opacity:0.8;cursor:pointer;}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+         <title>setTimeout() 예제</title>
+		<script type="text/javascript">
+			function openInfo(){
+				win=window.open("msgWindow.html","setTimeout","width=300,height=200")
+			}
+			function showMsg(){
+				win.document.write("로드하자마자 열린 공지사항 창이<br>3초 후에 자동으로 닫혔습니다.")
+			}
+		</script>
+	</head>		
+	<body onLoad="openInfo()" onFocus="showMsg()">    	
+	<!-- onload 이벤트 : body태그가 해석이 다 끝나고 브러우저로 표현되는 시점
+	 	 onfocus이벤트 : 창의 선택이 현재 창일 때
+	 	 -->
+	부모창입니다.
+	</body>
+</html>
+

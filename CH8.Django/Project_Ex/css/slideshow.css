@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* slideShow.css */
+
+#slideShow {
+    position:relative;
+    background-color:#ffffff;
+    height:520px;
+    line-height:520px;
+    border-bottom:solid #CCC 1px;
+}
+
+#slideShowBox {
+        width:1280px;
+        height:480px;
+        text-align:center;
+        overflow:hidden; /* 영역벗어나면 숨김 */
+}
+
+#slidePanel{
+    position:relative;
+    width:6400px; /* 1280*5 */
+    height:480px;
+}
+
+/* 슬라이드 이미지 */
+.slideImage {
+    float:left;
+    width:1280px;
+    height:480px;
+}
+
+/* previous/next 버튼 */
+#prevNextButtonBox {
+    position:relative;
+    z-index:10;
+}
+
+#prevButton {
+    position:absolute;
+    left:4%;
+    top:201px;
+    /* 슬라이드 이미지높이 480, 버튼의 높이 78 => 240-39=201은 슬라이드쇼의 중심 */
+    opacity:0.8;
+    cursor:pointer;
+}
+
+#nextButton {
+    position:absolute;
+    right:4%;
+    top:201px;
+    opacity:0.8;
+    cursor:pointer;
+}
+
+#prevButton:hover {opacity:1; /* 투명도 */}
+#nextButton:hover {opacity:1; /* 투명도 */}
+
+/* 컨트롤 버튼 */
+#controlPanel {margin:0 auto; width:160px;}
+#controlPanel img{float:left; margin:10px;}

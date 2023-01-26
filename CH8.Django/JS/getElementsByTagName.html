@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+        <title>getElementsByTagName() 예제</title>
+		<style>			
+			td { width:50px; height:30px; text-align:center; }
+		</style>
+        <script type="text/javascript">
+			window.onload = function(){
+				//문서 내 td태그 접근 포인터
+				var td = document.getElementsByTagName('td');
+
+
+				// 버튼에 클릭 이벤트를 연결하기 위해 버튼 객체 포인터
+				var setNumberBtn = document.getElementById('setNumberBtn');
+				var setColorBtn = document.getElementById('setColorBtn');
+				var clearNumberBtn = document.getElementById('clearNumberBtn');
+				var clearColorBtn = document.getElementById('clearColorBtn');
+
+				//각 버튼을 클릭했을 때 진행할 기능 추가
+				setNumberBtn.onclick = function(){
+					for(var i=0;i<td.length;i++)
+						td[i].innerHTML = i;
+				}
+				setColorBtn.onclick = function(){
+					var colors = ['red','orange','yellow','green','blue',
+					'navy','violet'];
+					for(var i=0;i<td.length;i++)
+						td[i].style.background=colors[i]
+				}
+				clearNumberBtn.onclick = function(){
+					for(var i=0;i<td.length;i++)
+						td[i].innerHTML = '';
+
+				}
+				clearColorBtn.onclick = function(){
+					for(var i=0;i<td.length;i++)
+						td[i].style.background='';
+				}
+			}
+
+		</script>
+    </head>
+    <body>
+    	<center>
+	    	<div id="box">
+	            <table border="1">
+	                <tr>
+	                    <td></td><td></td><td></td><td></td>
+	                    <td></td><td></td><td></td>
+	                </tr>
+	            </table>
+	            <p>            
+	            <button id="setNumberBtn">셀에 번호 채우기</button>
+	            <button id="setColorBtn">셀에 색상 채우기</button> 
+	            <p>
+	            <button id="clearNumberBtn">셀의 번호 지우기</button>
+	            <button id="clearColorBtn">셀의 색상 지우기</button> 
+			</div>
+		</center>
+    </body>
+</html>
+
