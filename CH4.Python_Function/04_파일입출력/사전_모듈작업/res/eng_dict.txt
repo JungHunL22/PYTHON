@@ -1,0 +1,1 @@
+note,dog,cat,coffee,turtle,-공책,강아지,고양이,커피,거북이,
